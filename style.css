@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn1,
+.btn2,
+.btn3,
+.btn4,
+.btn5,
+.btn6 {
+  font-size: 18px;
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: white;
+  color: blue;
+  box-shadow: -2px 2px 5px black;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Button 1*/
+.btn1:hover {
+  color: white;
+  border: 1px solid white;
+}
+.btn1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.btn1:hover::before {
+  transform: translateX(0%);
+}
+
+/* Button 2*/
+.btn2:hover {
+  color: white;
+  border: 1px solid white;
+}
+
+.btn2::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-90%);
+  transition: 0.5s;
+}
+.btn2:hover::before {
+  transform: translateX(-50%);
+}
+
+.btn2::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(90%);
+  transition: 0.5s;
+}
+.btn2:hover::after {
+  transform: translateX(50%);
+}
+
+/* Button 3*/
+.btn3 {
+  color: white;
+}
+.btn3:hover {
+  color: blue;
+  border-color: white;
+}
+
+.btn3::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.btn3:hover::before {
+  transform: translateX(-90%);
+}
+
+.btn3::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(50%);
+  transition: 0.5s;
+}
+.btn3:hover::after {
+  transform: translateX(90%);
+}
+
+/* Button 4*/
+.btn4 {
+  color: white;
+}
+.btn4:hover {
+  color: violet;
+  border-color: white;
+}
+
+.btn4::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: violet;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+.btn4:hover::before {
+  transform: translateY(-90%);
+}
+
+.btn4::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: violet;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateY(50%);
+  transition: 0.5s;
+}
+.btn4:hover::after {
+  transform: translateY(90%);
+}
+
+/* Button 5*/
+.btn5 {
+  color: aqua;
+}
+.btn5:hover {
+  color: white;
+  border-color: white;
+}
+
+.btn5::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+.btn5:hover::before {
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.btn5::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(100%);
+  transition: 0.5s;
+}
+.btn5:hover::after {
+  transform: translateX(50%) rotate(-180deg);
+}
+
+/* Button 6*/
+.btn6 {
+  color: black;
+}
+.btn6:hover {
+  color: violet;
+  border-color: white;
+}
+
+.btn6::before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-1%) translateY(-40%) scale(0%);
+  transition: 0.9s;
+  border-radius: 50%;
+}
+.btn6:hover::before {
+  transform: translateX(-1%) translateY(-40%) scale(100%);
+}
+
+.box article {
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 10px;
+  position: relative; /*if not provided it will go beyond box  */
+  box-shadow: -2px 2px 5px rgba(211, 6, 6, 0.5);
+}
+
+.box article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s all ease;
+}
+
+.box article:hover img {
+  transform: scale(1.2);
+}
+
+.box article::before {
+  content: "Article";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-250%);
+  z-index: 1;
+  transition: 0.5s;
+  color: rgb(231, 15, 191);
+  font-size: 24px;
+  font-weight: bold;
+  transition: 0.5s all ease;
+}
+.box article:hover::before {
+  transform: translateX(-50%) translateY(0%);
+}
+
+.box article::after {
+  content: "This is an article about pseudo element in css.";
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  transform: translateY(100%);
+  z-index: 1;
+  transition: 0.5s;
+  color: rgb(231, 15, 191);
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s all ease;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 15px;
+}
+.box article:hover::after {
+  transform: translateY(0%);
+}
